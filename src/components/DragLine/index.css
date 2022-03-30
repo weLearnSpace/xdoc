@@ -1,0 +1,22 @@
+.drag_line {
+  width: 1px;
+  margin-left: -1px;
+  z-index: 1;
+  transition: all 0.1s;
+  background-color: var(--border-color-base);
+  cursor: ew-resize;
+}
+
+.drag_line:hover {
+  width: 3px;
+  margin-left: -3px;
+  box-shadow: 0 0 2 0 var(--border-color-base);
+}
+
+.drag_line_min {
+  cursor: e-resize;
+}
+
+.drag_line_max {
+  cursor: w-resize;
+}

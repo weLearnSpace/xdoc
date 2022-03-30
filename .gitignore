@@ -21,15 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Local Netlify folder
-.netlify
-
-/.eslintcache
-
-# vscode settings
-/.vscode
-/.devcontainer/
-
-/logs/
-/src/core/data/validate-fns.js

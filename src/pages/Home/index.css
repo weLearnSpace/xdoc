@@ -1,0 +1,9 @@
+.home_page {
+  display: flex;
+  align-items: center;
+}
+
+.home_page,
+.home_page > div {
+  height: 100vh;
+}

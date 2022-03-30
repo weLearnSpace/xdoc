@@ -1,0 +1,8 @@
+.edit_content {
+  /* width: calc((100vw - 40px) / 2); */
+  /* border-right: 1px solid var(--border-color-base); */
+}
+
+.edit_content .bytemd {
+  height: 100vh;
+}
