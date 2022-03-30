@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Common/model/index.ts
-import React, { createContext, useEffect, useReducer } from 'react';
+import { createContext, useReducer } from 'react';
 
 type ICommonAction = {
   [key: string]: any;
