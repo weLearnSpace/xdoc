@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Home/model/index.ts
-import React, { createContext, useEffect, useReducer } from 'react';
+import { createContext, useEffect, useReducer } from 'react';
 import { fs } from '@tauri-apps/api';
 
 type IHomeAction = {
