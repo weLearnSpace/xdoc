@@ -1,5 +1,4 @@
-import React from 'react';
-import HomePage from './pages/Home';
+// import HomePage from './pages/Home';
 import './App.css';
 import { HomeContext, useHomeState } from './pages/Home/model';
 
@@ -8,7 +7,8 @@ function App() {
 
   return (
     <HomeContext.Provider value={[value, funs]}>
-      <HomePage />
+      {/* <HomePage /> */}
+      <div>123123</div>
     </HomeContext.Provider>
   );
 }
