@@ -6,8 +6,8 @@
   "build": {
     "distDir": "../build",
     "devPath": "http://127.0.0.1:8888",
-    "beforeDevCommand": "yarn start",
-    "beforeBuildCommand": "yarn build"
+    "beforeDevCommand": "yarn web:dev",
+    "beforeBuildCommand": "yarn web:build"
   },
   "tauri": {
     "bundle": {

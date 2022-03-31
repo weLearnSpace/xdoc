@@ -30,9 +30,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "web:build": "tsc && vite build",
+    "web:build": "react-scripts build",
     "web:dev": "cross-env BROWSER=none PORT=8888 react-scripts start",
-    "build": "react-scripts build",
     "dev": "tauri dev",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
