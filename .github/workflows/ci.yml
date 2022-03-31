@@ -2,9 +2,9 @@
 name: CI
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 permissions:
   pull-requests: write
@@ -19,27 +19,27 @@ jobs:
         node-version: ['16']
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-      # installs dependencies
-    - run: npm ci
-      # build
-    - name: Run ESLint
-      run: npm run lint
-    - name: Ensure project builds
-      run: npm run build
-      # run tests
-    - name: Run jest unit tests
-      run: npm run test:report
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage
-        verbose: true
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+        # installs dependencies
+      - run: npm i
+        # build
+      - name: Run ESLint
+        run: npm run lint
+      - name: Ensure project builds
+        run: npm run build
+        # run tests
+      - name: Run jest unit tests
+        run: npm run test:report
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage
+          verbose: true
 
   dependabot-auto-merge:
     needs: [test]
@@ -50,7 +50,7 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@v1.1.1
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
       - name: Enable auto-merge for Dependabot PRs
         if: ${{(steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type ==  'version-update:semver-minor')}}
         run: gh pr merge --auto --squash "$PR_URL"
